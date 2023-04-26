@@ -98,14 +98,14 @@ ul li a:hover{
     .col-a-1 {width:100%;}
 
     .first-intro{
-        font-size: 60px;
+        font-size: 50px;
         font-weight: bold;
         text-align: center;
         margin:  5px 0px 5px 0px;
     }
 
     .second-intro{
-        font-size: 40px;
+        font-size: 30px;
         font-weight: normal;
         text-align: center;
         margin: 0px;
@@ -157,7 +157,7 @@ ul li a:hover{
         text-decoration: none;      
         background-color: #df0000;
         border-radius: 20%;
-        margin: 20px 150px 0px 150px;
+        margin: 20px 100px 0px 100px;
         padding: 5px 5px 5px 5px;
         font-size: 20px;
         color: whitesmoke;

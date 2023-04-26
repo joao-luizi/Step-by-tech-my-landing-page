@@ -1,102 +1,29 @@
-
 /* From responsive CSS in https://www.w3schools.com/   */
 * {
     box-sizing: border-box;
-  }
+}
 /* From responsive CSS in https://www.w3schools.com/   */
 
-/* Responsive Web Design - Media Queries in https://www.w3schools.com/ 
-For mobile phones: */
 html {
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
-  body{
-    
-    overflow-x: hidden; 
-    animation: hide-scroll 3s;
-    }
-    
-    @keyframes hide-scroll {
-        from,
-        to {
-          overflow: hidden;
-        }
-      }
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    border: 0px;
-  }
-
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
-  }
-  .row-1 {
-    background-color: transparent;
-    padding: 15px;
-    
-  }
-
-  .aside {
-    background-color:transparent;
-    padding: 15px;
-    color: #ffffff;
-    text-align: center;
-    font-size: 25px;
-   
-  }
-  
-  .social-media{
-    background-color: #0099cc;
-    opacity: 0.8;
-    color: #ffffff;
-    text-align: center;
-    font-size: 25px;
-    padding: 15px;
-  }
-
-  .junior {
+.junior {
     color: red;
-  }
-  .front-rolling{
-    margin: 0px;
-    font-size: 25px;
-    text-align: center;
-  }
-  .roller {
-    margin: 0px;
-    height: 30pt;
-    line-height: 30pt;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+ }
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.CTA:hover{
+    opacity: .6;
     font-weight: bold;
-    display: flex;
-    align-items: center;
-    color: #32eb6f;
-    -webkit-user-select: none;
-    user-select: none
-    
-    
-    
 }
-
-.roller #rolltext {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    align-items: center;
-    text-align: center;
-    font-size: 30;
-    animation: slide 5s infinite
-    
-}
-
 @keyframes slide {
     0% {
         top: 0
@@ -118,103 +45,340 @@ html {
         top: -120pt
     }
 }
-.description{
-    font-weight: bold;
-    color: white;
-}
+
+.social-media{
+    background-color: #0099cc;
+    opacity: 0.8;
+    color: #ffffff;
+    text-align: center;
+    font-size: 25px;
+    padding: 15px 25% 0px 25%;
+  }
+
 ul{
     list-style: none;
-    margin-top: 50px;
-}
+    margin-top: 0px 0px 0px 0px;
+    padding: 0px;
+ }
 li{
     display: inline;
-}
+ }
 ul li a{
     color: white;
     text-decoration: none;
-    font-size: 20px; 
+    font-size: 40px; 
     padding: 5px;
-}
+ }
 ul li a:hover{
     opacity: .7;
-}
+ }
 
-.botao{
-    
-    text-align: center;
-    text-decoration: none;
-    background-color: #32eb6f;
-    border-radius: 20%;
-    padding: 5px 30px 5px 30px;
-    color: whitesmoke;
-    opacity: .7;
-}
-.botao:hover{
-    opacity: .5;
-}
-@media only screen and (max-width: 600px) {
 
-    [class*="col-"] {
+[class*="col-"] {
+    float: left;
+    padding: 0px;
+    margin: 1px;
+    border: 0px solid red; /* keep it for debugging */
+  }
+
+[class*="row"]::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+[class*="row"] {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+    border: 0px solid red; /* keep it for debugging */
+  }
+
+@media only screen and (max-width: 600px) { /* For Mobile: */
+    .col-a-1 {width:100%;}
+
+    .first-intro{
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        margin:  5px 0px 5px 0px;
+    }
+
+    .second-intro{
+        font-size: 40px;
+        font-weight: normal;
+        text-align: center;
+        margin: 0px;
+    }
+
+    .third-intro{
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+        margin: 8px 0px 0px 0px;
+    }
+
+    .front-rolling  {
+        margin: 5px 0px 5px 0px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .roller {
+        margin: 0px;
+        height: 30pt;
+        line-height: 30pt;
+        position: relative;
+        overflow: hidden;
         width: 100%;
-      }
-      .row-1{height: 15%;}
-      .row-2{height: 30%;}
-      .row-3{height: 30%;}
-      .row-4{height: 25%;}
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #32eb6f;
+        font-size: 30px;
+        -webkit-user-select: none;
+        user-select: none 
+        
+    }
 
-      body {
-        background-image: url(images/fundo_1024.jpg) ;
-        background-size: cover;   
+    .roller #rolltext {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        align-items: center;
+        text-align: center;
+        font-size: 30px;
+        animation: slide 5s infinite 
+    }
+
+    .CTA {
+        text-align: center;
+        text-decoration: none;      
+        background-color: #df0000;
+        border-radius: 20%;
+        margin: 20px 150px 0px 150px;
+        padding: 5px 5px 5px 5px;
+        font-size: 20px;
+        color: whitesmoke;
+        opacity: .3;
+    }
+
+    .custom_row {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+      -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+      flex-wrap: wrap;
       }
+       
+      /*** custom classes that will designate the order of columns in the flex box row ***/
+      .first-on-mobile {
+      -webkit-order: 1;
+      order: 1;
+      }
+       
+      .second-on-mobile {
+      -webkit-order: 2;
+      order: 2;
+      }
+       
+      .third-on-mobile {
+      -webkit-order: 3;
+      order: 3;
+      }
+       
+      .fourth-on-mobile {
+      -webkit-order: 4;
+      order: 4;
+      }
+      /*** add margin to last column ***/
+      .custom_row:last-child .et_pb_column:last-child {
+      margin-bottom: 30px;
+      }
+    body {
+        background-image: url(images/fundo_1024.jpg) ;
+        background-size: cover;
+    }
+
+}
+
+@media only screen and (min-width: 600px) { /* For tablets: */
+    
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+
+    .first-intro{
+        font-size: 140px;
+        font-weight: bold;
+        text-align: center;
+        margin:  5px 0px 15px 0px;
+        
+    }
+
+    .second-intro{
+        font-size: 60px;
+        font-weight: normal;
+        text-align: left;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .third-intro{
+        font-size: 40px;
+        font-weight: normal;
+        text-align: center;
+        margin: 00px 0px 20px 0px;
+    }
+   
+    .front-rolling  {
+        margin: 10px 0px 10px 0px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .roller {
+        margin: 0px;
+        height: 30pt;
+        line-height: 30pt;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #32eb6f;
+        font-size: 40px;
+        -webkit-user-select: none;
+        user-select: none 
+        
+    }
+
+    .roller #rolltext {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+        animation: slide 5s infinite 
+    }
+
+    .CTA {
+        text-align: center;
+        text-decoration: none;      
+        background-color: #df0000;
+        border-radius: 20%;
+        margin: 20px 150px 0px 150px;
+        padding: 5px 5px 5px 5px;
+        font-size: 30px;
+        color: whitesmoke;
+        opacity: .3;
     }
     
-      @media only screen and (min-width: 600px) {
-        /* For tablets: */
-        .col-s-1 {width: 8.33%;}
-        .col-s-2 {width: 16.66%;}
-        .col-s-3 {width: 25%;}
-        .col-s-4 {width: 33.33%;}
-        .col-s-5 {width: 41.66%;}
-        .col-s-6 {width: 50%;}
-        .col-s-7 {width: 58.33%;}
-        .col-s-8 {width: 66.66%;}
-        .col-s-9 {width: 75%;}
-        .col-s-10 {width: 83.33%;}
-        .col-s-11 {width: 91.66%;}
-        .col-s-12 {width: 100%;}
-        .row-1{height: 15%;}
-        .row-2{height: 30%;}
-        .row-3{height: 30%;}
-        .row-4{height: 25%;}
+
+
+    body {
+        background-image: url(images/fundo_2000.jpg) ;
+        background-size: cover;
+    }
+}
+
+@media only screen and (min-width: 768px) { /* For desktop: */
     
-        body {
-            background-image: url(images/fundo_2000.jpg) ;
-            background-size: cover;
-        }
-      }
-      
-      @media only screen and (min-width: 768px) {
-        /* For desktop: */
-        .col-1 {width: 8.33%;}
-        .col-2 {width: 16.66%;}
-        .col-3 {width: 25%;}
-        .col-4 {width: 33.33%;}
-        .col-5 {width: 41.66%;}
-        .col-6 {width: 50%;}
-        .col-7 {width: 58.33%;}
-        .col-8 {width: 66.66%;}
-        .col-9 {width: 75%;}
-        .col-10 {width: 83.33%;}
-        .col-11 {width: 91.66%;}
-        .col-12 {width: 100%;}
-        .row-1{height: 15%;}
-        .row-2{height: 30%;}
-        .row-3{height: 30%;}
-        .row-4{height: 25%;}
-    
-        body {
-            background-image: url(images/fundo_2000.jpg) ;
-            background-size: cover;
-          }
-      }
-    /* Responsive Web Design - Media Queries in https://www.w3schools.com/ */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+   
+    .first-intro{
+        font-size: 140px;
+        font-weight: bold;
+        text-align: center;   
+        margin:  5px 0px 15px 0px;
+    }
+
+    .second-intro{
+        font-size: 60px;
+        font-weight: normal;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+    }
+
+    .third-intro{
+        font-size: 40px;
+        font-weight: normal;
+        text-align: center;
+        margin: 0px 0px 20px 0px;
+    }
+
+    .front-rolling  {
+        margin: 10px 0px 10px 0px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .roller {
+        margin: 0px;
+        height: 30pt;
+        line-height: 30pt;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        color: #32eb6f;
+        font-size: 40px;
+        -webkit-user-select: none;
+        user-select: none 
+        
+    }
+
+    .roller #rolltext {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        align-items: center;
+        text-align: center;
+        font-size: 40px;
+        animation: slide 5s infinite 
+    }
+
+    .CTA {
+        text-align: center;
+        text-decoration: none;      
+        background-color: #df0000;
+        border-radius: 20%;
+        margin: 20px 150px 0px 150px;
+        padding: 5px 5px 5px 5px;
+        font-size: 30px;
+        color: whitesmoke;
+        opacity: .3;
+    }
+    body {
+        background-image: url(images/fundo_2000.jpg) ;
+        background-size: cover;
+    }
+}

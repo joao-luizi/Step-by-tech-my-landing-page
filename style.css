@@ -1,3 +1,13 @@
+/*
+       _                             _ _   ______           _        _           _____   _                    _      _ _     _                _         _ 
+      | |                           ( | ) |  ____|         | |      | |         / ____| | |                  | |    ( | )   | |              (_)       (_)
+      | |   ___     __ _    ___      V V  | |__     _   _  | |      | |        | (___   | |_    __ _    ___  | | __  V V    | |       _   _   _   ____  _ 
+  _   | |  / _ \   / _` |  / _ \          |  __|   | | | | | |      | |         \___ \  | __|  / _` |  / __| | |/ /         | |      | | | | | | |_  / | |
+ | |__| | | (_) | | (_| | | (_) |         | |      | |_| | | |____  | |____     ____) | | |_  | (_| | | (__  |   <          | |____  | |_| | | |  / /  | |
+  \____/   \___/   \__,_|  \___/          |_|       \__,_| |______| |______|   |_____/   \__|  \__,_|  \___| |_|\_\         |______|  \__,_| |_| /___| |_|                                                                                                                                                                                                                                                                                      
+*/
+
+
 /* From responsive CSS in https://www.w3schools.com/   */
 * {
     box-sizing: border-box;
@@ -8,8 +18,19 @@ html {
     font-family: 'Montserrat', sans-serif;
     color: white;
   }
-.junior {
+.span-red {
     color: red;
+    font-weight: bold;
+ }
+
+ .span-green {
+    color: #32eb6f;
+    font-weight: bold;
+    
+ }
+ .span-blue{
+    color: lightskyblue;
+    font-weight: bold;
  }
 a,
 a:link,
@@ -20,10 +41,32 @@ a:active{
     color: whitesmoke;
 }
 
-.CTA:hover{
-    opacity: .6;
+button {
+    --c:  #229091; /* the color*/
+    color: #32eb6f;
+    opacity: 0.7;
+    box-shadow: 0 0 0 .1em inset var(--c); 
+    --_g: linear-gradient(var(--c) 0 0) no-repeat;
+    background: 
+      var(--_g) calc(var(--_p,0%) - 100%) 0%,
+      var(--_g) calc(200% - var(--_p,0%)) 0%,
+      var(--_g) calc(var(--_p,0%) - 100%) 100%,
+      var(--_g) calc(200% - var(--_p,0%)) 100%;
+    background-size: 50.5% calc(var(--_p,0%)/2 + .5%);
+    outline-offset: .1em;
+    transition: background-size .4s, background-position 0s .4s;
+  }
+  button:hover {
+    --_p: 100%;
+    transition: background-position .4s, background-size 0s;
+    opacity: 1;
     font-weight: bold;
-}
+  }
+  button:active {
+    box-shadow: 0 0 9e9q inset #0009; 
+    background-color: var(--c);
+    color: #fff;
+  }
 @keyframes slide {
     0% {
         top: 0
@@ -94,18 +137,18 @@ ul li a:hover{
     border: 0px solid red; /* keep it for debugging */
   }
 
-@media only screen and (max-width: 600px) { /* For Mobile: */
+@media only screen and (max-width: 599px) { /* For Mobile: */
     .col-a-1 {width:100%;}
 
     .first-intro{
-        font-size: 50px;
+        font-size: 30px;
         font-weight: bold;
         text-align: center;
-        margin:  5px 0px 5px 0px;
+        margin:  5px 0px 15px 0px;
     }
 
     .second-intro{
-        font-size: 30px;
+        font-size: 20px;
         font-weight: normal;
         text-align: center;
         margin: 0px;
@@ -115,7 +158,15 @@ ul li a:hover{
         font-size: 20px;
         font-weight: normal;
         text-align: center;
-        margin: 8px 0px 0px 0px;
+        margin: 10px 0px 0px 0px;
+    }
+
+    .fourth-intro{
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+        
     }
 
     .front-rolling  {
@@ -151,18 +202,16 @@ ul li a:hover{
         font-size: 30px;
         animation: slide 5s infinite 
     }
-
-    .CTA {
-        text-align: center;
-        text-decoration: none;      
-        background-color: #df0000;
-        border-radius: 20%;
-        margin: 20px 100px 0px 100px;
+    button{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 5px 5px 5px 5px;
         font-size: 20px;
-        color: whitesmoke;
-        opacity: .3;
+        align-items: center;
+        margin-top: 20px;
     }
+    
 
     .custom_row {
         display: -webkit-box;
@@ -199,7 +248,7 @@ ul li a:hover{
       margin-bottom: 30px;
       }
     body {
-        background-image: url(images/fundo_1024.jpg) ;
+        background-image: url(images/fundo_1024.webp) ;
         background-size: cover;
     }
 
@@ -241,7 +290,13 @@ ul li a:hover{
         text-align: center;
         margin: 00px 0px 20px 0px;
     }
+    .fourth-intro{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
    
+    }
     .front-rolling  {
         margin: 10px 0px 10px 0px;
         font-size: 40px;
@@ -275,23 +330,18 @@ ul li a:hover{
         font-size: 40px;
         animation: slide 5s infinite 
     }
-
-    .CTA {
-        text-align: center;
-        text-decoration: none;      
-        background-color: #df0000;
-        border-radius: 20%;
-        margin: 20px 150px 0px 150px;
+    button{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 5px 5px 5px 5px;
         font-size: 30px;
-        color: whitesmoke;
-        opacity: .3;
+        align-items: center;
+        margin-top: 20px;
     }
     
-
-
     body {
-        background-image: url(images/fundo_2000.jpg) ;
+        background-image: url(images/fundo_2000.webp) ;
         background-size: cover;
     }
 }
@@ -329,9 +379,15 @@ ul li a:hover{
         font-size: 40px;
         font-weight: normal;
         text-align: center;
-        margin: 0px 0px 20px 0px;
+        margin: 0px 0px 10px 0px;
     }
-
+    .fourth-intro{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin: 20px 0px 20px 0px;
+ 
+    }
     .front-rolling  {
         margin: 10px 0px 10px 0px;
         font-size: 40px;
@@ -365,20 +421,18 @@ ul li a:hover{
         font-size: 40px;
         animation: slide 5s infinite 
     }
-
-    .CTA {
-        text-align: center;
-        text-decoration: none;      
-        background-color: #df0000;
-        border-radius: 20%;
-        margin: 20px 150px 0px 150px;
+    button{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 5px 5px 5px 5px;
         font-size: 30px;
-        color: whitesmoke;
-        opacity: .3;
+        align-items: center;
+        margin-top: 20px;
     }
+
     body {
-        background-image: url(images/fundo_2000.jpg) ;
+        background-image: url(images/fundo_2000.webp) ;
         background-size: cover;
     }
 }

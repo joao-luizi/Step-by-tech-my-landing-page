@@ -249,7 +249,9 @@ ul li a:hover{
       }
     body {
         background-image: url(images/fundo_1024.webp) ;
+        background-repeat: no-repeat;
         background-size: cover;
+        background-position: bottom;
     }
 
 }
@@ -270,7 +272,7 @@ ul li a:hover{
     .col-s-12 {width: 100%;}
 
     .first-intro{
-        font-size: 140px;
+        font-size: 40px;
         font-weight: bold;
         text-align: center;
         margin:  5px 0px 15px 0px;
@@ -278,20 +280,20 @@ ul li a:hover{
     }
 
     .second-intro{
-        font-size: 60px;
+        font-size: 20px;
         font-weight: normal;
-        text-align: left;
-        margin: 20px 0px 20px 0px;
+        text-align: center;
+        margin: 10px 0px 10px 0px;
     }
 
     .third-intro{
-        font-size: 40px;
+        font-size: 20px;
         font-weight: normal;
         text-align: center;
-        margin: 00px 0px 20px 0px;
+        margin: 0px 0px 20px 0px;
     }
     .fourth-intro{
-        font-size: 40px;
+        font-size: 20px;
         font-weight: bold;
         text-align: center;
         margin: 20px 0px 20px 0px;
@@ -299,7 +301,7 @@ ul li a:hover{
     }
     .front-rolling  {
         margin: 10px 0px 10px 0px;
-        font-size: 40px;
+        font-size: 10px;
         text-align: center;
     }
 
@@ -314,7 +316,7 @@ ul li a:hover{
         display: flex;
         align-items: center;
         color: #32eb6f;
-        font-size: 40px;
+        font-size: 10px;
         -webkit-user-select: none;
         user-select: none 
         
@@ -327,7 +329,7 @@ ul li a:hover{
         top: 0;
         align-items: center;
         text-align: center;
-        font-size: 40px;
+        font-size: 10px;
         animation: slide 5s infinite 
     }
     button{
@@ -335,7 +337,7 @@ ul li a:hover{
         left: 50%;
         transform: translateX(-50%);
         padding: 5px 5px 5px 5px;
-        font-size: 30px;
+        font-size: 20px;
         align-items: center;
         margin-top: 20px;
     }
